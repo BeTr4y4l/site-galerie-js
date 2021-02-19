@@ -1,0 +1,107 @@
+*,
+::before,
+::after {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(356deg, rgba(0, 0, 0, 0.7763480392156863) 0%, rgba(0, 0, 0, 1) 100%);
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.titleContainer {
+    transition: 3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 220vh;
+    font-size: 80px;
+    color: #f1f1f1;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+.title {
+    padding: 50px;
+    opacity: 0;
+    transition: 3s;
+}
+
+.title:hover {
+    color: rgb(30, 30, 30);
+    text-shadow: 3px 3px 3px #f1f1f1;
+}
+
+.galerieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1800px;
+    margin: 0px auto 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 2.5s;
+    opacity: 0;
+    width: 400px;
+    height: 600px;
+    margin: 300px 100px 20px;
+    border-radius: 5%;
+    overflow: hidden;
+    flex-shrink: 0;
+    -webkit-box-shadow: 30px 10px 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 30px 10px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 30px 10px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.citation {
+    position: absolute;
+    font-size: 50px;
+    color: #f1f1f1;
+    visibility: hidden;
+    opacity: 0;
+    text-shadow: 3px 3px 0px #000;
+    transform: rotate(10deg);
+}
+
+.text {
+    color: #f1f1f1;
+    font-size: 30px;
+}
+
+.item:hover {
+    transition: 0.4s;
+    transform: translateX(5px) translateY(5px) rotate(1deg);
+    -webkit-box-shadow: 40px 10px 5px 30px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 40px 10px 5px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 40px 10px 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item:hover .citation {
+    transform: translateY(-20px) translateX(-20px);
+    transition: 2.5s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.visible {
+    transition: 2s;
+    opacity: 1;
+}
